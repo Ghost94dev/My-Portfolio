@@ -73,11 +73,11 @@ body {
     color: rgb(216, 117, 173);
     margin: 1rem 0;
     margin-left: 3px;
-    font-size: 3rem;
+    font-size: 2.5rem;
 }
 
 .home-left h1 {
-    font-size: 3rem;
+    font-size: 2.5rem;
 }
 
 .home-right {
@@ -85,22 +85,19 @@ body {
 }
 
 .home-right img {
-    position: absolute;
-    width:170%;
-    left: 40px;
-    top: -50px;
-    background-size: cover;
-    border-radius: 84%;
-    height: 150%;
+    max-width: 110%;
+    height: auto;
+    border-radius: 50%;
+    position: relative;
 }
 
 
 
 .circle {
-    width: 17rem;
-    height: 17rem;
-    border-radius: 50%;
-    padding: .5rem;
+    width: 19rem;
+    height: 25rem;
+    border-radius: 60%;
+    padding: .4rem;
     position: relative;
 }
 
@@ -119,8 +116,8 @@ body {
 }
 
 .about-left img {
-    width: 110%;
-    height: 400px;
+    width: 100%;
+    height: auto;
     border-radius: 1rem;
 }
 
@@ -185,67 +182,70 @@ body {
 
 
 
-
-
 /* Projects Section */
-.projects-section {
-    padding: 50px 20px;
-    background: #1f1f38;
-    color: #fff;
-    text-align: center;
-}
-
 .projects-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-    margin-top: 40px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 1rem;
 }
 
 .project-card {
-    background: #2c2c54;
-    border-radius: 15px;
-    padding: 20px;
+    background: #2c2c6c;
+    border-radius: 1.2rem;
+    padding: 1.5rem;
+    text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    color: #fff;
+}
+
+.project-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.8rem;
+    color: #facc15; /* yellow/golden for titles */
+}
+
+.project-card p {
+    font-size: 0.85rem;
+    line-height: 1.4;
+    margin-bottom: 1rem;
+    color: #ddd;
 }
 
 .project-card img {
     width: 100%;
-    border-radius: 12px;
-    margin-bottom: 15px;
+    height: auto;
+    border-radius: 0.8rem;
+    margin-bottom: 1rem;
 }
 
-.project-card h3 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-    color: #f1c40f;
+/* Hover effect */
+.project-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+}
+
+/* Buttons inside project card */
+.project-card .btn {
+    margin: 0.3rem;
+    padding: 0.5rem 1rem;
+    font-size: 0.85rem;
 }
 
 .project-card p {
-    font-size: 0.95rem;
-    margin-bottom: 10px;
+    font-size: 1rem;
+    line-height: 1.4;
+    margin-bottom: 1rem;
     color: #ddd;
 }
 
-.project-links {
-    margin-top: 15px;
-}
-
-.project-links .btn {
-    display: inline-block;
-    margin: 5px;
-    padding: 10px 18px;
-    border-radius: 8px;
-    text-decoration: none;
-    color: #fff;
-    background: #4CAF50;
-    transition: background 0.3s ease, transform 0.2s ease;
-}
-
-.project-links .btn:hover {
-    background: #2F4F4F;
-    transform: scale(1.05);
+/* Make it 1 column on mobile */
+@media (max-width: 768px) {
+    .projects-container {
+        grid-template-columns: 1fr;
+    }
 }
 
 
@@ -452,7 +452,7 @@ ul li a:hover {
   cursor: pointer;
   transition: transform .2s ease, box-shadow .2s ease, background-color .2s ease, color .2s ease, opacity .2s ease;
   will-change: transform;
-  border-radius: 999px;           /* pill look; tweak if you prefer */
+  border-radius: 999px;
   outline: none;
 }
 
@@ -467,10 +467,10 @@ ul li a:hover {
   box-shadow: 0 6px 16px rgba(0,0,0,.18) inset;
 }
 
-/* optional: subtle effect for your "Live" variant button */
+/* optional: subtle effect for "Live" variant button */
 .btn.live:hover,
 .btn.live:focus-visible {
-  filter: brightness(1.05);       /* gentle pop without changing your palette */
+  filter: brightness(1.05);
 }
 
 /* Better keyboard focus ring */
@@ -498,7 +498,7 @@ ul li a:hover {
   background: rgba(255,255,255,.03);
 }
 
-/* If you add images inside project cards later, this gives a nice zoom */
+/* this gives a nice zoom */
 .projects-item img {
   transition: transform .35s ease;
 }
