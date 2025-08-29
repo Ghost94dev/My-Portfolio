@@ -7,8 +7,8 @@ from Myportfolio.models import Contact
 
 # Create your views here.
 
-def home(request):
-    return render(request,'home.html')
+def index(request):
+    return render(request,'index.html')
 
 # @login_required(login_url='')
 def contact(request):
@@ -24,20 +24,20 @@ def contact(request):
         if len(name) > 1 and len(name) < 30:
             pass
         else:
-            messages.error(request, 'Lenght of name should be greater than 2 and less than 30 words ')
-            return render(request, 'home.html')
+            messages.error(request, 'Length of name should be greater than 2 and less than 30 words ')
+            return render(request, 'index.html')
 
         if len(email) > 1 and len(email) < 30:
             pass
         else:
             messages.error(request, 'invaild email try again ')
-            return render(request, 'home.html')
+            return render(request, 'index.html')
         print(len(number))
         if len(number) > 9 and len(number) < 13:
             pass
         else:
             messages.error(request, 'invaild number please try again ')
-            return render(request, 'home.html')
+            return render(request, 'index.html')
         #save
         ins = models.Contact(name=name, email=email, content=content, number=number)
         ins.save()
@@ -46,4 +46,4 @@ def contact(request):
 
         print('The request is no pass ')
 
-    return render(request, 'home.html')
+    return render(request, 'index.html')
