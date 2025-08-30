@@ -1,8 +1,8 @@
 from django.shortcuts import render ,redirect
 from django.http import HttpResponse
 from django.contrib import messages
-from Myportfolio import models
-from Myportfolio.models import Contact
+from myportfolio import models
+from myportfolio.models import Contact
 # from django.contrib.auth.decorators import login_required
 
 # Create your views here.

@@ -1,5 +1,5 @@
 from django.contrib import admin
-from Myportfolio.models import Contact
+from myportfolio.models import Contact
 # Register your models here.
 
 @admin.register(Contact)

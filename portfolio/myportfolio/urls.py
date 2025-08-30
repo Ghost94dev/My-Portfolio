@@ -1,5 +1,5 @@
 from django.urls import path
-from Myportfolio import views
+from myportfolio import views
 
 
 

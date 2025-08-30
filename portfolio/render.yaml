@@ -1,9 +1,9 @@
 services:
   - type: web
-    name: my-portfolio   # you can change to yourname-portfolio
+    name: madozin-portfolio
     env: python
     plan: free
     buildCommand: |
       pip install -r requirements.txt
       python manage.py collectstatic --noinput
-    startCommand: gunicorn Myportfolio.wsgi:application
+    startCommand: "gunicorn portfolio.portfolio.wsgi:application"
