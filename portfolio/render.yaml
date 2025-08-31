@@ -6,8 +6,8 @@ services:
     buildCommand: |
       pip install --upgrade pip
       pip install -r requirements.txt
-      python manage.py collectstatic --noinput
-    startCommand: cd portfolio && gunicorn portfolio.wsgi:application
+      python portfolio/manage.py collectstatic --noinput
+    startCommand: gunicorn portfolio.wsgi:application --pythonpath portfolio
     envVars:
       - key: DEBUG
         value: "False"
