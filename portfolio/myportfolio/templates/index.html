@@ -340,6 +340,35 @@
         
         document.querySelector('#navbar ul').classList.remove('active');
     });
+
+      // Add this to your existing script
+window.addEventListener('scroll', function() {
+    const navbar = document.getElementById('navbar');
+    if (window.scrollY > 100) {
+        navbar.style.background = 'rgba(31, 31, 56, 0.95)';
+        navbar.style.backdropFilter = 'blur(10px)';
+    } else {
+        navbar.style.background = '#1f1f38';
+        navbar.style.backdropFilter = 'none';
+    }
+});
+
+// Smooth scrolling for navigation links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+            const navbarHeight = document.getElementById('navbar').offsetHeight;
+            const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - navbarHeight;
+            
+            window.scrollTo({
+                top: targetPosition,
+                behavior: 'smooth'
+            });
+        }
+    });
+});
 </script>
 </body>
 </html>
