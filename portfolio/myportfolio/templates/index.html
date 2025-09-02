@@ -1,372 +1,341 @@
-{% load static%}
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>portf </title>
-    <link rel="icon" type="image/x-icon" href="./Images/favicon.jpeg">
-    <link rel="stylesheet" href="{% static 'css/style.css'%}">
-
-
+    <title>Evlin Devalor - Portfolio</title>
+    <link rel="icon" type="image/x-icon" href="{% static 'images/favicon.jpeg' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-
     <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">
-
 </head>
 <body>
 
     <!-- Navbar Section -->
-   <nav id="navbar" class="flex s-around bg-color">
-    <div class="nav-container">
-        <div class="left-nav">
-            <h2 class="t-white">Portfolio</h2>
-        </div>
-        <div class="right-nav">
-            <div class="hamburger">
-                <i class="fas fa-bars"></i>
+    <nav id="navbar" class="bg-color">
+        <div class="nav-container">
+            <div class="left-nav">
+                <h2 class="t-white">Portfolio</h2>
             </div>
-            <ul>
-                <li><a href="#home" class="t-white roboto">Home <i class="fa-solid fa-house"></i></a></li>
-                <li><a href="#about" class="t-white roboto">About Me <i class="fa-solid fa-user"></i></a></li>
-                <li><a href="#skills" class="t-white roboto">Skills <i class="fa-solid fa-code"></i></a></li>
-                <li><a href="#projects" class="t-white roboto">Projects <i class="fas fa-project-diagram"></i></a></li>
-                <li><a href="#Contact" class="t-white roboto">Contact <i class="fa-solid fa-rocket"></i></a></li>
-            </ul>
+            <div class="right-nav">
+                <div class="hamburger">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <ul>
+                    <li><a href="#home" class="t-white roboto">Home <i class="fa-solid fa-house"></i></a></li>
+                    <li><a href="#about" class="t-white roboto">About Me <i class="fa-solid fa-user"></i></a></li>
+                    <li><a href="#skills" class="t-white roboto">Skills <i class="fa-solid fa-code"></i></a></li>
+                    <li><a href="#projects" class="t-white roboto">Projects <i class="fas fa-project-diagram"></i></a></li>
+                    <li><a href="#Contact" class="t-white roboto">Contact <i class="fa-solid fa-rocket"></i></a></li>
+                </ul>
+            </div>
         </div>
-    </div>
-</nav>
-
-
+    </nav>
 
     <!-- Home Section -->
-    <section id="home" class="flex s-around sw-80 m-auto">
-        <div class="container">
-        <div class="home-left flex items-center">
-            <div class="home-content">
-                <h6 class="poppinss">Hi, I'm</h6>
-                <h1 class="t-white">Evlin Devalor Bengba-Madozin</h1>
-                <h4 class="poppinss">Software Engineer</h4>
-                <div class="buttons">
-                    <a href="{% static 'pdf/Bengba-Madozin-CV-Resume.pdf' %}" target="_blank">
-                        <button class="btn poppins">Resume</button>
-                    </a>
-                    <a class="btn" id="hireme" href="#Contact">Let's Talk</a>
+    <section id="home">
+        <div class="home-container">
+            <div class="home-left">
+                <div class="home-content">
+                    <h6 class="poppins">Hi, I'm</h6>
+                    <h1 class="t-white">Evlin Devalor Bengba-Madozin</h1>
+                    <h4 class="poppins">Software Engineer</h4>
+                    <div class="buttons">
+                        <a href="{% static 'pdf/Bengba-Madozin-CV-Resume.pdf' %}" target="_blank" class="btn poppins">Resume</a>
+                        <a class="btn" id="hireme" href="#Contact">Let's Talk</a>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="home-right flex s-center items-center">
-            <div class="circle flex s-center items-center" id="mainImage">
-                <img src="{% static 'images/Mypic1.png'%}" alt="">
+            <div class="home-right">
+                <div class="circle" id="mainImage">
+                    <img src="{% static 'images/Mypic1.png' %}" alt="Evlin Devalor">
+                </div>
             </div>
-        </div>
-    </div>      
-</section>
+        </div>      
+    </section>
 
     <!-- About Section -->
     <section id="about">
         <h1 class="t-center my-2 t-white f-2">About Me</h1>
-        <div class="about-container flex s-around ">
-            <div class=" about-left flex s-center items-center">
-                <img src="{%static 'images/dog.png'%}" alt="" style="width: 60%;">
+        <div class="about-container">
+            <div class="about-left">
+                <img src="{% static 'images/dog.png' %}" alt="About Me">
             </div>
-
-            <div class="about-right flex">
+            <div class="about-right">
                 <div class="about-content">
                     <h1 class="t-white m-b-1 poppins">Evlin Devalor Bengba Madozin</h1>
-                   <p class="poppins t-white">
+                    <p class="poppins t-white">
                         I am a dedicated and hardworking Computer Science graduate with a strong passion for learning and problem-solving.
                         My interests lie in building efficient web applications and exploring AI-powered solutions, with a particular focus on back-end development.
                         Skilled in Python, Django, Java, and databases such as MySQL and PostgreSQL, I am eager to contribute to impactful projects while continuing to grow as a developer.
                         Currently seeking entry-level roles or internships in software engineering, AI, and web development.
-                   </p>
-                    <a class="btn " id="hireme"
-                        href="#Contact">Hire Me</a>
+                    </p>
+                    <a class="btn" id="hireme" href="#Contact">Hire Me</a>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Skills Section -->
-       <section id="Skills" class="skills-section">
-      <h1 class="t-center my-2 t-white f-2">Skills</h1>
+    <section id="skills" class="skills-section">
+        <h1 class="t-center my-2 t-white f-2">Skills</h1>
+        <div class="skills-container">
+            <!-- Programming Languages -->
+            <div class="skills-group">
+                <h2 class="skills-title">Languages</h2>
+                <div class="skills-list">
+                    <span class="skill-badge">Python</span>
+                    <span class="skill-badge">Java</span>
+                    <span class="skill-badge">JavaScript</span>
+                    <span class="skill-badge">C++</span>
+                </div>
+            </div>
 
-      <div class="skills-container">
-        <!-- Programming Languages -->
-        <div class="skills-group">
-          <h2 class="skills-title">Languages</h2>
-          <div class="skills-list">
-            <span class="skill-badge">Python</span>
-              <span class="skill-badge">Java</span>
-            <span class="skill-badge">JavaScript</span>
-            <span class="skill-badge">C++</span>
-          </div>
+            <!-- Frameworks -->
+            <div class="skills-group">
+                <h2 class="skills-title">Frameworks</h2>
+                <div class="skills-list">
+                    <span class="skill-badge">Django</span>
+                    <span class="skill-badge">React</span>
+                    <span class="skill-badge">Flask</span>
+                </div>
+            </div>
+
+            <!-- Databases -->
+            <div class="skills-group">
+                <h2 class="skills-title">Databases</h2>
+                <div class="skills-list">
+                    <span class="skill-badge">MySQL</span>
+                    <span class="skill-badge">PostgreSQL</span>
+                    <span class="skill-badge">SQLite</span>
+                </div>
+            </div>
+
+            <!-- Tools -->
+            <div class="skills-group">
+                <h2 class="skills-title">Tools</h2>
+                <div class="skills-list">
+                    <span class="skill-badge">Git</span>
+                    <span class="skill-badge">Docker</span>
+                    <span class="skill-badge">TablePlus</span>
+                    <span class="skill-badge">Apache NetBeans</span>
+                    <span class="skill-badge">PyCharm</span>
+                </div>
+            </div>
         </div>
-
-        <!-- Frameworks -->
-        <div class="skills-group">
-          <h2 class="skills-title">Frameworks</h2>
-          <div class="skills-list">
-            <span class="skill-badge">Django</span>
-            <span class="skill-badge">React</span>
-            <span class="skill-badge">Flask</span>
-          </div>
-        </div>
-
-          <!-- Databases -->
-    <div class="skills-group">
-      <h2 class="skills-title">Databases</h2>
-      <div class="skills-list">
-        <span class="skill-badge">MySQL</span>
-        <span class="skill-badge">PostgreSQL</span>
-        <span class="skill-badge">SQLite</span>
-      </div>
-    </div>
-
-
-        <!-- Tools -->
-        <div class="skills-group">
-          <h2 class="skills-title">Tools</h2>
-          <div class="skills-list">
-            <span class="skill-badge">Git</span>
-            <span class="skill-badge">Docker</span>
-            <span class="skill-badge">TablePlus</span>
-              <span class="skill-badge">Apache NetBeans</span>
-              <span class="skill-badge">PyCharm</span>
-
-          </div>
-        </div>
-      </div>
     </section>
 
-
-
     <!-- Projects Section -->
-   <section id="projects" class="projects-section">
-    <h1 class="t-center my-2 t-white f-2">My Projects</h1>
+    <section id="projects" class="projects-section">
+        <h1 class="t-center my-2 t-white f-2">My Projects</h1>
+        <div class="projects-container">
+            <!-- Project 1: Todo List -->
+            <div class="project-card">
+                <a href="{% static 'images/todo_3.png' %}" data-lightbox="todo" data-title="Todo App - Homepage">
+                    <img src="{% static 'images/todo_3.png' %}" alt="Todo App">
+                </a>
+                <a href="{% static 'images/todo_2.png' %}" data-lightbox="todo" data-title="Todo App - Task View"></a>
+                <a href="{% static 'images/todo_1.png' %}" data-lightbox="todo" data-title="Todo App - Categories"></a>
+                <h3>Todo List App</h3>
+                <p>A multi-user Todo app built with Django. Users can create, update, and categorize tasks.</p>
+                <p><strong>Tech stack:</strong> Django, Python, HTML, CSS</p>
+                <div class="project-links">
+                    <a href="https://github.com/Ghost94dev/Django-Multi-User-To-Do-List-App" target="_blank" class="btn">GitHub</a>
+                    <a href="https://yourtodo.pythonanywhere.com" target="_blank" class="btn">Live Demo</a>
+                </div>
+            </div>
 
-    <div class="projects-container">
-        <!-- Project 1: Todo List -->
-        <div class="project-card">
-            <!-- Main image (always visible) -->
-            <a href="{% static 'images/todo_3.png' %}" data-lightbox="todo" data-title="Todo App - Homepage">
-                <img src="{% static 'images/todo_3.png' %}" alt="Todo App">
-            </a>
+            <!-- Project 2: Music Player -->
+            <div class="project-card">
+                <a href="{% static 'images/music_3.png' %}" data-lightbox="music" data-title="Music Player - Homepage">
+                    <img src="{% static 'images/music_3.png' %}" alt="Music Player">
+                </a>
+                <a href="{% static 'images/music_1.png' %}" data-lightbox="music" data-title="Music Player - Playlist"></a>
+                <a href="{% static 'images/music_3.png' %}" data-lightbox="music" data-title="Music Player - Lyrics Sync"></a>
+                <h3>Music Player Web App</h3>
+                <p>A responsive web-based music player with autoplay, playlists, and lyrics sync.</p>
+                <p><strong>Tech stack:</strong> Python, JavaScript, HTML, CSS</p>
+                <div class="project-links">
+                    <a href="https://github.com/Ghost94dev/-Music-Player-App" target="_blank" class="btn">GitHub</a>
+                    <a href="https://yourmusic.netlify.app" target="_blank" class="btn">Live Demo</a>
+                </div>
+            </div>
 
-              <!-- Hidden extra images (only show in Lightbox) -->
-            <a href="{% static 'images/todo_2.png' %}" data-lightbox="todo" data-title="Todo App - Task View"></a>
-            <a href="{% static 'images/todo_1.png' %}" data-lightbox="todo" data-title="Todo App - Categories"></a>
+            <!-- Blog Project -->
+            <div class="project-card">
+                <a href="{% static 'images/blog_1.png' %}" data-lightbox="blog" data-title="Blog Website - Homepage">
+                    <img src="{% static 'images/blog_1.png' %}" alt="Blog Website">
+                </a>
+                <a href="{% static 'images/blog_2.png' %}" data-lightbox="blog" data-title="Blog Website - My Blog"></a>
+                <a href="{% static 'images/blog_3.png' %}" data-lightbox="blog" data-title="Blog Website - Add article"></a>
+                <h3>Blog Website</h3>
+                <p>A feature-rich blog platform where multiple authors can publish, edit, and manage posts with authentication and comments.</p>
+                <p><strong>Tech stack:</strong> Django, Python, HTML, CSS, Bootstrap</p>
+                <div class="project-links">
+                    <a href="https://github.com/Ghost94dev/django_blog" target="_blank" class="btn">GitHub</a>
+                    <a href="https://yourblog.pythonanywhere.com" target="_blank" class="btn">Live Demo</a>
+                </div>
+            </div>
 
-            <h3>Todo List App</h3>
-            <p>A multi-user Todo app built with Django. Users can create, update, and categorize tasks.</p>
-            <p><strong>Tech stack:</strong> Django, Python, HTML, CSS</p>
-            <div class="project-links">
-                <a href="https://github.com/Ghost94dev/Django-Multi-User-To-Do-List-App" target="_blank" class="btn">GitHub</a>
-                <a href="https://yourtodo.pythonanywhere.com" target="_blank" class="btn">Live Demo</a>
+            <!-- Weather App Project -->
+            <div class="project-card">
+                <a href="{% static 'images/waether_1.png' %}" data-lightbox="weather" data-title="Weather App - Homepage">
+                    <img src="{% static 'images/waether_1.png' %}" alt="Weather App">
+                </a>
+                <a href="{% static 'images/weather_3.png' %}" data-lightbox="weather" data-title="Weather App - Forecast"></a>
+                <a href="{% static 'images/weather_2.png' %}" data-lightbox="weather" data-title="Weather App - Details"></a>
+                <h3>Weather App</h3>
+                <p>A real-time weather forecast app that fetches live data from an API. Users can search cities and get temperature, humidity, and conditions instantly.</p>
+                <p><strong>Tech stack:</strong> Python, Django, JavaScript, OpenWeather API, Bootstrap</p>
+                <div class="project-links">
+                    <a href="https://github.com/Ghost94dev/Weather-App-with-Django-" target="_blank" class="btn">GitHub</a>
+                    <a href="https://yourweather.pythonanywhere.com" target="_blank" class="btn">Live Demo</a>
+                </div>
+            </div>
+
+            <!-- Portfolio Project -->
+            <div class="project-card">
+                <a href="{% static 'images/portfolio.png' %}" data-lightbox="portfolio" data-title="Portfolio Website - Homepage">
+                    <img src="{% static 'images/portfolio.png' %}" alt="Portfolio Website">
+                </a>
+                <a href="{% static 'images/portfolio_about.png' %}" data-lightbox="portfolio" data-title="Portfolio Website - About Section"></a>
+                <a href="{% static 'images/portfolio_contact.png' %}" data-lightbox="portfolio" data-title="Portfolio Website - Projects Section"></a>
+                <h3>Portfolio Website</h3>
+                <p>A personal portfolio website showcasing my skills, projects, and contact information. Built with responsive design and modern styling.</p>
+                <p><strong>Tech stack:</strong> Django, Python, HTML, CSS, JavaScript</p>
+                <div class="project-links">
+                    <a href="https://github.com/Ghost94dev/My-Portfolio" target="_blank" class="btn">GitHub</a>
+                    <a href="https://yourportfolio.pythonanywhere.com" target="_blank" class="btn">Live Demo</a>
+                </div>
             </div>
         </div>
-
-        <!-- Project 2: Music Player -->
-        <div class="project-card">
-            <a href="{% static 'images/music_3.png' %}" data-lightbox="music" data-title="Music Player - Homepage">
-               <img src="{% static 'images/music_3.png' %}" alt="Music Player">
-            </a>
-
-            <a href="{% static 'images/music_1.png' %}" data-lightbox="music" data-title="Music Player - Playlist"></a>
-            <a href="{% static 'images/music_3.png' %}" data-lightbox="music" data-title="Music Player - Lyrics Sync"></a>
-
-            <h3>Music Player Web App</h3>
-            <p>A responsive web-based music player with autoplay, playlists, and lyrics sync.</p>
-            <p><strong>Tech stack:</strong> Python, JavaScript, HTML, CSS</p>
-            <div class="project-links">
-                <a href="https://github.com/Ghost94dev/-Music-Player-App" target="_blank" class="btn">GitHub</a>
-                <a href="https://yourmusic.netlify.app" target="_blank" class="btn">Live Demo</a>
-            </div>
-        </div>
-
-        <!-- Blog Project -->
-        <div class="project-card">
-           <a href="{% static 'images/blog_1.png' %}" data-lightbox="blog" data-title="Blog Website - Homepage">
-              <img src="{% static 'images/blog_1.png' %}" alt="Music Player">
-           </a>
-
-          <a href="{% static 'images/blog_2.png' %}" data-lightbox="blog" data-title="Blog Website - My Blog"></a>
-          <a href="{% static 'images/blog_3.png' %}" data-lightbox="blog" data-title="Blog Website - Add article"></a>
-
-            <h3>Blog Website</h3>
-            <p>A feature-rich blog platform where multiple authors can publish, edit, and manage posts with authentication and comments.</p>
-            <p><strong>Tech stack:</strong> Django, Python, HTML, CSS, Bootstrap</p>
-            <div class="project-links">
-                <a href="https://github.com/Ghost94dev/django_blog" target="_blank" class="btn">GitHub</a>
-                <a href="https://yourblog.pythonanywhere.com" target="_blank" class="btn">Live Demo</a>
-            </div>
-        </div>
-
-<!-- Weather App Project -->
-        <div class="project-card">
-            <a href="{% static 'images/waether_1.png' %}" data-lightbox="blog" data-title="Blog Website - Homepage">
-              <img src="{% static 'images/waether_1.png' %}" alt="Music Player">
-           </a>
-
-          <a href="{% static 'images/weather_3.png' %}" data-lightbox="weather" data-title="Weather App - Playlist"></a>
-          <a href="{% static 'images/weather_2.png' %}" data-lightbox="weather" data-title="Weather App - Lyrics Sync"></a>
-
-            <h3>Weather App</h3>
-            <p>A real-time weather forecast app that fetches live data from an API. Users can search cities and get temperature, humidity, and conditions instantly.</p>
-            <p><strong>Tech stack:</strong> Python, Django, JavaScript, OpenWeather API, Bootstrap</p>
-            <div class="project-links">
-                <a href="https://github.com/Ghost94dev/Weather-App-with-Django-" target="_blank" class="btn">GitHub</a>
-                <a href="https://yourweather.pythonanywhere.com" target="_blank" class="btn">Live Demo</a>
-            </div>
-        </div>
-
-        <!-- Portfolio Project -->
-    <div class="project-card">
-        <a href="{% static 'images/portfolio.png' %}" data-lightbox="portfolio" data-title="Portfolio Website - Homepage">
-            <img src="{% static 'images/portfolio.png' %}" alt="Portfolio Website">
-        </a>
-
-
-        <a href="{% static 'images/portfolio_about.png' %}" data-lightbox="portfolio" data-title="Portfolio Website - About Section"></a>
-        <a href="{% static 'images/portfolio_contact.png' %}" data-lightbox="portfolio" data-title="Portfolio Website - Projects Section"></a>
-
-        <h3>Portfolio Website</h3>
-        <p>A personal portfolio website showcasing my skills, projects, and contact information. Built with responsive design and modern styling.</p>
-        <p><strong>Tech stack:</strong> Django, Python, HTML, CSS, JavaScript</p>
-
-        <div class="project-links">
-            <a href="https://github.com/Ghost94dev/My-Portfolio" target="_blank" class="btn">GitHub</a>
-            <a href="https://yourportfolio.pythonanywhere.com" target="_blank" class="btn">Live Demo</a>
-        </div>
-    </div>
-
-    </div>
-</section>
-
+    </section>
 
     <!-- Contact Me Section -->
-    <section id="Contact" class="m-b-1">
-        <h1 class=" t-center my-2 t-white f-2">Contact Me</h1>
-        <div class="contact-container flex s-around items-centers">
+    <section id="Contact">
+        <h1 class="t-center my-2 t-white f-2">Contact Me</h1>
+        <div class="contact-container">
             <div class="form" id="contactForm">
                 <form method="POST" action="{% url 'contact' %}">
                     {% if messages %}
-                     <div class="messages">
-                    {% for message in messages %}
-                      <p class="alert {{ message.tags }}">{{ message }}</p>
-                    {% endfor %}
-                  </div>
-                {% endif %}
+                    <div class="messages">
+                        {% for message in messages %}
+                        <p class="alert {{ message.tags }}">{{ message }}</p>
+                        {% endfor %}
+                    </div>
+                    {% endif %}
 
                     {% csrf_token %}
                     <div class="name form-div">
-                        <input type="text" name="name" id="name" class="poppins" placeholder="Enter Your Name">
+                        <input type="text" name="name" id="name" class="poppins" placeholder="Enter Your Name" required>
                     </div>
 
                     <div class="email form-div">
-                        <input type="email" name="email" id="" class="poppins" placeholder="Enter Your Email"
-                            required>
+                        <input type="email" name="email" id="email" class="poppins" placeholder="Enter Your Email" required>
                     </div>
 
                     <div class="phone form-div">
-                        <input type="phone" name="number" id="" class="poppins" placeholder="Enter Your Phone"
-                            required>
+                        <input type="tel" name="number" id="phone" class="poppins" placeholder="Enter Your Phone" required>
                     </div>
 
                     <div class="textarea form-div">
-                        <textarea name="content" id="textarea" cols="30" rows="10" class="poppins"
-                            placeholder="Enter Messages"></textarea>
+                        <textarea name="content" id="textarea" cols="30" rows="10" class="poppins" placeholder="Enter Your Message" required></textarea>
                     </div>
                     <button type="submit" class="btn poppins" id="submit">Send</button>
                 </form>
-
             </div>
         </div>
     </section>
 
     <!-- Footer Section -->
     <footer id="footer">
-        <ul class="flex s-center w-80 m-auto my-2 res">
-            <li><a href="#home" class="poppinss">Home</a></li>
-            <li><a href="#about" class="poppinss">About</a></li>
-            <li><a href="#skills" class="poppinss">Skills</a></li>
-            <li><a href="#projects" class="poppinss">Projects</a></li>
+        <ul class="footer-nav">
+            <li><a href="#home" class="poppins">Home</a></li>
+            <li><a href="#about" class="poppins">About</a></li>
+            <li><a href="#skills" class="poppins">Skills</a></li>
+            <li><a href="#projects" class="poppins">Projects</a></li>
         </ul>
-        <ul class="flex s-center w-80 font-awesome ">
-            <a href="mailto:madozin.dev@gmail.com?subject=Portfolio%20Contact&body=Hi%20there," target="_blank">
-                <li><i class="fa-solid fa-envelope"></i></li>
-            </a>
-
-            <a href="linkedin.com/in/evlin-devalor-bengba-madozin-a34514189" target="_blank">
-                <li><i class="fa-brands fa-linkedin-in"></i></li>
-            </a>
-            <a href="https://github.com/Ghost94dev" target="_blank">
-                <li><i class="fa-brands fa-github"></i></li>
-            </a>
-                <a href="" target="_blank">
-                    <li><i class="fa-brands fa-instagram"></i></li>
-            </a>
-
+        <ul class="social-links">
+            <li>
+                <a href="mailto:madozin.dev@gmail.com?subject=Portfolio%20Contact&body=Hi%20there," target="_blank">
+                    <i class="fa-solid fa-envelope"></i>
+                </a>
+            </li>
+            <li>
+                <a href="https://linkedin.com/in/evlin-devalor-bengba-madozin-a34514189" target="_blank">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+            </li>
+            <li>
+                <a href="https://github.com/Ghost94dev" target="_blank">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+            </li>
+            <li>
+                <a href="#" target="_blank">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+            </li>
         </ul>
-        <p class="t-center my-2 poppins">&copy; All Rights Reserved - <span class="cpy-white poppins">Ghost94dev
-                </span></p>
-
+        <p class="t-center my-2 poppins">&copy; All Rights Reserved - <span class="cpy-white poppins">Ghost94dev</span></p>
     </footer>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
-  <script>
-    // Mobile navigation toggle
-    document.querySelector('.hamburger').addEventListener('click', function() {
-        document.querySelector('#navbar ul').classList.toggle('active');
-    });
 
-    // Close mobile menu when clicking on a link
-    document.querySelectorAll('#navbar ul li a').forEach(link => {
-        link.addEventListener('click', function() {
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+    <script>
+        // Mobile navigation toggle
+        document.querySelector('.hamburger').addEventListener('click', function() {
+            document.querySelector('#navbar ul').classList.toggle('active');
+        });
+
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('#navbar ul li a').forEach(link => {
+            link.addEventListener('click', function() {
+                document.querySelector('#navbar ul').classList.remove('active');
+            });
+        });
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const navbar = document.querySelector('#navbar');
+            const hamburger = document.querySelector('.hamburger');
+            
+            if (!navbar.contains(event.target) || event.target === hamburger) {
+                return;
+            }
+            
             document.querySelector('#navbar ul').classList.remove('active');
         });
-    });
 
-    // Close mobile menu when clicking outside
-    document.addEventListener('click', function(event) {
-        const navbar = document.querySelector('#navbar');
-        const hamburger = document.querySelector('.hamburger');
-        
-        if (!navbar.contains(event.target) || event.target === hamburger) {
-            return;
-        }
-        
-        document.querySelector('#navbar ul').classList.remove('active');
-    });
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 100) {
+                navbar.style.background = 'rgba(31, 31, 56, 0.95)';
+                navbar.style.backdropFilter = 'blur(10px)';
+            } else {
+                navbar.style.background = '#1f1f38';
+                navbar.style.backdropFilter = 'none';
+            }
+        });
 
-      // Add this to your existing script
-window.addEventListener('scroll', function() {
-    const navbar = document.getElementById('navbar');
-    if (window.scrollY > 100) {
-        navbar.style.background = 'rgba(31, 31, 56, 0.95)';
-        navbar.style.backdropFilter = 'blur(10px)';
-    } else {
-        navbar.style.background = '#1f1f38';
-        navbar.style.backdropFilter = 'none';
-    }
-});
-
-// Smooth scrolling for navigation links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-            const navbarHeight = document.getElementById('navbar').offsetHeight;
-            const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - navbarHeight;
-            
-            window.scrollTo({
-                top: targetPosition,
-                behavior: 'smooth'
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const navbarHeight = document.getElementById('navbar').offsetHeight;
+                    const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - navbarHeight;
+                    
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
             });
-        }
-    });
-});
-</script>
+        });
+    </script>
 </body>
 </html>
