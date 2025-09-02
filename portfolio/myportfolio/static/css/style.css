@@ -551,3 +551,250 @@ ul li a:hover {
   from { opacity: 0; transform: translateY(-10px); }
   to { opacity: 1; transform: translateY(0); }
 }
+
+
+/* ========================================= */
+/* MOBILE RESPONSIVENESS */
+/* ========================================= */
+
+/* Mobile Navigation */
+.hamburger {
+    display: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+#navbar {
+    padding: 0 1rem;
+    background-color: #1f1f38;
+}
+
+/* Container for sections */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* Home section adjustments for mobile */
+#home {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    min-height: 80vh;
+}
+
+.home-left, .home-right {
+    width: 40%;
+}
+
+.circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, transparent, rgba(255, 255, 255, 0.1));
+}
+
+/* About section adjustments */
+.about-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* Project links */
+.project-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+/* Form adjustments */
+.form {
+    width: 80%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Footer adjustments */
+#footer ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+}
+
+.font-awesome {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 1.5rem 0;
+}
+
+.font-awesome a {
+    margin: 0 0.5rem;
+}
+
+.font-awesome i {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Buttons container */
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+/* ========================================= */
+/* MEDIA QUERIES FOR MOBILE RESPONSIVENESS */
+/* ========================================= */
+
+/* Tablets and smaller desktops */
+@media (max-width: 968px) {
+    #home {
+        flex-direction: column;
+        text-align: center;
+        padding: 1rem;
+    }
+    
+    .home-left, .home-right {
+        width: 100%;
+        padding: 1rem;
+    }
+    
+    .home-left h1 {
+        font-size: 2rem;
+    }
+    
+    .home-left h6, .home-left h4 {
+        font-size: 1.8rem;
+    }
+    
+    .circle {
+        width: 15rem;
+        height: 15rem;
+    }
+    
+    .about-container {
+        flex-direction: column;
+    }
+    
+    .about-left, .about-right {
+        width: 100%;
+        padding: 1rem;
+    }
+    
+    .form {
+        width: 100%;
+        padding: 0 1rem;
+    }
+}
+
+/* Mobile devices */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+    
+    #navbar ul {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #1f1f38;
+        flex-direction: column;
+        padding: 1rem 0;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    #navbar ul.active {
+        display: flex;
+    }
+    
+    #navbar ul li {
+        margin: 0.5rem 0;
+        text-align: center;
+    }
+    
+    .skills-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .projects-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .home-left h1 {
+        font-size: 1.8rem;
+    }
+}
+
+/* Small mobile devices */
+@media (max-width: 480px) {
+    .home-left h1 {
+        font-size: 1.5rem;
+    }
+    
+    .home-left h6, .home-left h4 {
+        font-size: 1.2rem;
+    }
+    
+    .circle {
+        width: 12rem;
+        height: 12rem;
+    }
+    
+    .btn {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.9rem;
+    }
+    
+    .project-card {
+        padding: 1rem;
+    }
+    
+    .project-links {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .project-links .btn {
+        width: 100%;
+        margin: 0.3rem 0;
+    }
+    
+    .buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .buttons .btn {
+        width: 100%;
+        margin: 0.3rem 0;
+    }
+}
