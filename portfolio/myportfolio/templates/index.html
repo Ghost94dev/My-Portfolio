@@ -18,12 +18,16 @@
 <body>`
 
     <!-- Navbar Section -->
-    <nav id="navbar" class="flex s-around bg-color">
+   <nav id="navbar" class="flex s-around bg-color">
+    <div class="nav-container">
         <div class="left-nav">
             <h2 class="t-white">Portfolio</h2>
         </div>
         <div class="right-nav">
-            <ul class="flex">
+            <div class="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul>
                 <li><a href="#home" class="t-white roboto">Home <i class="fa-solid fa-house"></i></a></li>
                 <li><a href="#about" class="t-white roboto">About Me <i class="fa-solid fa-user"></i></a></li>
                 <li><a href="#skills" class="t-white roboto">Skills <i class="fa-solid fa-code"></i></a></li>
@@ -31,21 +35,25 @@
                 <li><a href="#Contact" class="t-white roboto">Contact <i class="fa-solid fa-rocket"></i></a></li>
             </ul>
         </div>
-    </nav>
+    </div>
+</nav>
 
 
 
     <!-- Home Section -->
     <section id="home" class="flex s-around sw-80 m-auto">
+        <div class="container">
         <div class="home-left flex items-center">
             <div class="home-content">
                 <h6 class="poppinss">Hi, I'm</h6>
                 <h1 class="t-white">Evlin Devalor Bengba-Madozin</h1>
                 <h4 class="poppinss">Software Engineer</h4>
+                <div class="buttons">
                 <a href="{% static 'pdf/Bengba-Madozin-CV-Resume.pdf' %}"  target="_blank">
                     <button class="btn poppins">Resume</button></a>
 
                 <a class="btn" id="hireme" href="#Contact">Let's Talk</a>
+                </div>
             </div>
         </div>
         <div class="home-right flex s-center items-center">
@@ -55,6 +63,7 @@
             </div>
 
         </div>
+        </div>      
     </section>
 
     <!-- About Section -->
@@ -308,5 +317,30 @@
 
     </footer>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+  <script>
+    // Mobile navigation toggle
+    document.querySelector('.hamburger').addEventListener('click', function() {
+        document.querySelector('#navbar ul').classList.toggle('active');
+    });
+
+    // Close mobile menu when clicking on a link
+    document.querySelectorAll('#navbar ul li a').forEach(link => {
+        link.addEventListener('click', function() {
+            document.querySelector('#navbar ul').classList.remove('active');
+        });
+    });
+
+    // Close mobile menu when clicking outside
+    document.addEventListener('click', function(event) {
+        const navbar = document.querySelector('#navbar');
+        const hamburger = document.querySelector('.hamburger');
+        
+        if (!navbar.contains(event.target) || event.target === hamburger) {
+            return;
+        }
+        
+        document.querySelector('#navbar ul').classList.remove('active');
+    });
+</script>
 </body>
 </html>
