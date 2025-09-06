@@ -1,3 +1,4 @@
+
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
@@ -28,7 +29,7 @@
                     <li><a href="#about" class="t-white roboto">About Me <i class="fa-solid fa-user"></i></a></li>
                     <li><a href="#skills" class="t-white roboto">Skills <i class="fa-solid fa-code"></i></a></li>
                     <li><a href="#projects" class="t-white roboto">Projects <i class="fas fa-project-diagram"></i></a></li>
-                    <li><a href="#Contact" class="t-white roboto">Contact <i class="fa-solid fa-rocket"></i></a></li>
+                    <li><a href="#contact" class="t-white roboto">Contact <i class="fa-solid fa-rocket"></i></a></li>
                 </ul>
             </div>
         </div>
@@ -44,7 +45,7 @@
                     <h4 class="poppins">Software Engineer</h4>
                     <div class="buttons">
                         <a href="{% static 'pdf/Evlin Devalor Bangba-Madozin CV Resume.pdf' %}" target="_blank" class="btn poppins">Resume</a>
-                        <a class="btn" id="hireme" href="#Contact">Let's Talk</a>
+                        <a class="btn" id="hireme" href="#contact">Let's Talk</a>
                     </div>
                 </div>
             </div>
@@ -53,7 +54,7 @@
                     <img src="{% static 'images/Mypic1.png' %}" alt="Evlin Devalor">
                 </div>
             </div>
-        </div>      
+        </div>
     </section>
 
     <!-- About Section -->
@@ -72,7 +73,7 @@
                         Skilled in Python, Django, Java, and databases such as MySQL and PostgreSQL, I am eager to contribute to impactful projects while continuing to grow as a developer.
                         Currently seeking entry-level roles or internships in software engineering, AI, and web development.
                     </p>
-                    <a class="btn" id="hireme" href="#Contact">Hire Me</a>
+                    <a class="btn" id="hireme" href="#contact">Hire Me</a>
                 </div>
             </div>
         </div>
@@ -214,7 +215,7 @@
     </section>
 
     <!-- Contact Me Section -->
-    <section id="Contact">
+    <section id="contact">
         <h1 class="t-center my-2 t-white f-2">Contact Me</h1>
         <div class="contact-container">
             <div class="form" id="contactForm">
@@ -284,56 +285,56 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
     <script>
-        // Mobile navigation toggle
-        document.querySelector('.hamburger').addEventListener('click', function() {
-            document.querySelector('#navbar ul').classList.toggle('active');
-        });
-
-        // Close mobile menu when clicking on a link
-        document.querySelectorAll('#navbar ul li a').forEach(link => {
-            link.addEventListener('click', function() {
-                document.querySelector('#navbar ul').classList.remove('active');
-            });
-        });
-
-        // Close mobile menu when clicking outside
-        document.addEventListener('click', function(event) {
-            const navbar = document.querySelector('#navbar');
+        document.addEventListener('DOMContentLoaded', function () {
             const hamburger = document.querySelector('.hamburger');
-            
-            if (!navbar.contains(event.target) || event.target === hamburger) {
-                return;
-            }
-            
-            document.querySelector('#navbar ul').classList.remove('active');
-        });
+            const menu = document.querySelector('#navbar ul');
 
-        // Navbar scroll effect
-        window.addEventListener('scroll', function() {
-            const navbar = document.getElementById('navbar');
-            if (window.scrollY > 100) {
-                navbar.style.background = 'rgba(31, 31, 56, 0.95)';
-                navbar.style.backdropFilter = 'blur(10px)';
-            } else {
-                navbar.style.background = '#1f1f38';
-                navbar.style.backdropFilter = 'none';
-            }
-        });
+            // Toggle menu on hamburger click
+            hamburger.addEventListener('click', function () {
+                menu.classList.toggle('active');
+            });
 
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    const navbarHeight = document.getElementById('navbar').offsetHeight;
-                    const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - navbarHeight;
-                    
-                    window.scrollTo({
-                        top: targetPosition,
-                        behavior: 'smooth'
-                    });
+            // Close menu when clicking a link
+            document.querySelectorAll('#navbar ul li a').forEach(link => {
+                link.addEventListener('click', function () {
+                    menu.classList.remove('active');
+                });
+            });
+
+            // Close menu when clicking outside
+            document.addEventListener('click', function (event) {
+                if (!document.querySelector('#navbar').contains(event.target) && menu.classList.contains('active')) {
+                    menu.classList.remove('active');
                 }
+            });
+
+            // Navbar scroll background change
+            window.addEventListener('scroll', function () {
+                const navbar = document.getElementById('navbar');
+                if (window.scrollY > 100) {
+                    navbar.style.background = 'rgba(31, 31, 56, 0.95)';
+                    navbar.style.backdropFilter = 'blur(10px)';
+                } else {
+                    navbar.style.background = '#1f1f38';
+                    navbar.style.backdropFilter = 'none';
+                }
+            });
+
+            // Smooth scrolling
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        const navbarHeight = document.getElementById('navbar').offsetHeight;
+                        const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - navbarHeight;
+
+                        window.scrollTo({
+                            top: targetPosition,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
             });
         });
     </script>
