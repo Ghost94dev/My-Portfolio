@@ -70,16 +70,6 @@ body {
     background-color: #fff;
 }
 
-
-#navbar ul {
-    display: none;
-    /* other styles */
-}
-
-#navbar ul.active {
-    display: flex; /* or block, depending on layout */
-    flex-direction: column;
-}
 .hamburger {
     display: none;
     cursor: pointer;
